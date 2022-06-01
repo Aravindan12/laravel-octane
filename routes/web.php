@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 Route::get('file', [SampleController::class,'file'])->name('file');
 Route::post('file-upload', [SampleController::class,'fileUpload'])->name('file.upload');
+Route::get('list', [SampleController::class,'getUserList'])->name('list');
+Route::get('job-test', [SampleController::class,'queueTest'])->name('job-test');

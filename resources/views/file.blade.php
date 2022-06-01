@@ -25,7 +25,8 @@
             </div>
         </form>
         <div id="heading">
-            @if(isset($a))
+            @if(isset($data))
+            {{count($data)}}
             <table class="table">
                 <thead>
                     <tr>
@@ -33,12 +34,12 @@
                         <th scope="col">col2</th>
                       </tr>
                 </thead>
-                @foreach($a as $b)
+                @foreach($data as $b)
                 <tbody id="tbody">
                 <tr>
-                        <td scope="col">{{$b}}</td>
-                        <td scope="col">{{$b}}</td>
-                      </tr>
+                        <td scope="col">{{$b[0]['name']}}</td>
+                        <td scope="col">{{$b[0]['email']}}</td>
+                </tr>
                 </tbody>
                 @endforeach
             </table>
